@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<table class="table voyages">
+		<thead>
+			<tr>
+				<th scope="col">Depart</th>
+				<th scope="col">Arrivée</th>
+				<th scope="col">Created_at</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for voyage in voyages %}
+				<tr>
+					<td>
+						{{ voyage['depart'] }}
+					</td>
+					<td>
+						{{ voyage['destination'] }}
+					</td>
+					<td>
+						{{ voyage['created_at'] }}
+					</td>
+				</tr>
+
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
